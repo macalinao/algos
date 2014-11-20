@@ -35,15 +35,18 @@ public class BST {
     public void remove(int value) {
     }
 
+    public void printBFS() {
+    }
+
     public void printDFS() {
       printDFS("");
     }
 
     public void printDFS(String pad) {
-      System.out.println(pad + value);
       if (a != null) {
         a.printDFS(pad + " ");
       }
+      System.out.println(pad + value);
       if (b != null) {
         b.printDFS(pad + " ");
       }
