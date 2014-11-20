@@ -36,6 +36,18 @@ public class BST {
     }
 
     public void printBFS() {
+      Queue<Node> q = new LinkedList<>();
+      q.add(this);
+      while (!q.isEmpty()) {
+        Node n = q.poll();
+        System.out.println(n.value);
+        if (n.a != null) {
+          q.add(n.a);
+        }
+        if (n.b != null) {
+          q.add(n.b);
+        }
+      }
     }
 
     public void printDFS() {
@@ -65,6 +77,7 @@ public class BST {
     n.insert(11);
     n.insert(16);
     n.printDFS();
+    n.printBFS();
   }
 
 
